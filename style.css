@@ -1,8 +1,4 @@
 body {
     background-color: #f0f0f0;
-}
-
-.container {
-    max-width: 1440px;
-    margin: 0 auto;
+    margin: 0; /* Global reset to fix browser margin. */
 }
