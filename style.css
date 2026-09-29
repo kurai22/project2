@@ -15,6 +15,12 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .container {
     display: grid;
     grid-template-areas: 
@@ -45,18 +51,41 @@ body {
 }
 
 #header {
+    width: 100%;
     display: flex;
-    min-width: 1440px;
     margin: 0 auto;
     height: 85px;
+    background-color: #333;
     justify-content: space-between;
     align-items: center;
+
+    .inner {
+        width: 1440px;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .logo {
         font-size: 24px;
         font-weight: 700;
         text-decoration: none;
-        color: #333;
+        color: #fff;
+        &:hover {
+            color: #ccc;
+        }
+    }
+
+    nav {
+        a {
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
@@ -68,8 +97,20 @@ body {
 .sidebar {
     display: flex;
     flex-direction: column;
-    align-items: center;
     min-height: 0;
+
+    .sidebar-content {
+        padding: 7px !important;
+        margin: 5px !important;
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        ul {
+            list-style: circle;
+            margin-left: 20px;
+        }
+    }
 }
 
 #footer {
@@ -97,15 +138,20 @@ body {
     }
 
     #header {
-        min-width: 80%;
-        nav {
-            a {
-                display: block;
-                padding: 10px;
-                text-decoration: none;
-                color: #333;
+        width: 100dvw;
+
+        .inner {
+            width: 80%;
+
+            nav {
+                a {
+                    padding: 10px;
+                    text-decoration: none;
+                    color: #fff;
+                }
             }
         }
+
     }
     .sidebar {
         display: flex;
