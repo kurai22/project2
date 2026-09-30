@@ -55,6 +55,7 @@ ul, ol {
     margin: 0 auto;
     height: 85px;
     background-color: color-mix(in srgb, #f5c751, black 20%);
+    border-bottom: #333 1px solid;
     justify-content: space-between;
     align-items: center;
 
@@ -68,9 +69,15 @@ ul, ol {
     }
 
     .logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
         font-size: 24px;
         font-weight: 700;
         text-decoration: none;
+        padding-right: 112px;
+        margin-left: 10px;
+        border-right: solid 1px #333;
         color: #fff;
         &:hover {
             color: #ccc;
@@ -107,6 +114,7 @@ ul, ol {
     flex-direction: column;
     min-height: 0;
     background-color: color-mix(in srgb, #f5c751, black 20%);
+    border-right: #333 solid 1px;
 
     .sidebar-content {
         flex-direction: column;
