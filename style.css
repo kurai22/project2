@@ -54,12 +54,12 @@ ul, ol {
     display: flex;
     margin: 0 auto;
     height: 85px;
-    background-color: #333;
+    background-color: color-mix(in srgb, #f5c751, black 20%);
     justify-content: space-between;
     align-items: center;
 
     .inner {
-        width: 80%;
+        width: 95%;
         height: 100%;
         margin: 0 auto;
         display: flex;
@@ -106,19 +106,27 @@ ul, ol {
     display: flex;
     flex-direction: column;
     min-height: 0;
-    background-color: #333;
+    background-color: color-mix(in srgb, #f5c751, black 20%);
 
     .sidebar-content {
-        padding: 7px !important;
-        margin: 5px !important;
+        flex-direction: column;
+        padding: 7px;
+        margin: 5px;
         h2 {
             font-size: 18px;
             font-weight: 700;
-            margin-top: 0;;
+            margin-bottom: 5px;
+            text-transform: uppercase;
         }
         ul {
             list-style: circle;
+            list-style-type: disc;
             margin-left: 20px;
+            li {
+                a {
+                    text-decoration: none;;
+                }
+            }
         }
     }
 }
@@ -130,8 +138,9 @@ ul, ol {
     padding: 10px;
     font-size: 14px;
     font-weight: 700;
-    background-color: #d1d2d2;
-    border-top: solid 1px #ccc;
+    background-color: #232323;
+    color: #ffffff;
+    border-top: 3px solid #c49a3c;
     text-align: center;
 }
 
@@ -161,7 +170,7 @@ ul, ol {
                 align-items: center;
                 right: 0;
                 top: 65px;
-                background-color: #333;
+                background-color: color-mix(in srgb, #f5c751, black 20%);
                 padding: 5px;
                 border-radius: 0 0 5px 5px;
                 gap: 2px;
@@ -170,6 +179,10 @@ ul, ol {
                     padding: 10px;
                     margin-right: 0;
                     text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
 
@@ -197,9 +210,15 @@ ul, ol {
         }
 
     }
-    
+
     .sidebar {
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: flex-start;
+    
+        .sidebar-content {
+            width: 75%;
+        }
     }
 }
