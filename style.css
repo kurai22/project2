@@ -108,6 +108,7 @@ ul, ol {
 
 .content {
     display: flex;
+	flex-direction: column;
     padding: 10px;
 }
 
